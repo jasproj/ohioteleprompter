@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Ohio Teleprompter</title>
+    <meta name="description" content="Privacy policy for Ohio Teleprompter, a subsidiary of Claduta Corp.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c9a227'/%3E%3Crect x='30' y='25' width='40' height='30' rx='3' fill='%23080706'/%3E%3Crect x='35' y='30' width='30' height='20' fill='%23c9a227' opacity='0.3'/%3E%3Crect x='38' y='60' width='24' height='4' fill='%23080706'/%3E%3Crect x='44' y='64' width='12' height='12' fill='%23080706'/%3E%3C/svg%3E">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-void: #080706;
+            --bg-deep: #0d0b09;
+            --bg-elevated: #1c1915;
+            --gold: #c9a227;
+            --gold-light: #e8c547;
+            --copper: #b87333;
+            --text-bright: #faf8f5;
+            --text-primary: #e8e4dc;
+            --text-secondary: #a89d8a;
+            --text-muted: #6b6155;
+            --border: rgba(201, 162, 39, 0.08);
+            --border-light: rgba(201, 162, 39, 0.15);
+            --font-display: 'Arial Black', 'Helvetica Neue', sans-serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg-void); color: var(--text-primary); line-height: 1.7; }
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 9999;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+        }
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
+            background: rgba(8, 7, 6, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+        }
+        .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-bright); }
+        .nav-logo svg { width: 40px; height: 40px; }
+        .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .nav-logo-name { font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 0.05em; }
+        .nav-logo-tagline { font-size: 0.55rem; color: var(--text-muted); letter-spacing: 0.22em; text-transform: uppercase; }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-link { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease; }
+        .nav-link:hover { color: var(--gold); }
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--copper)); color: var(--bg-void);
+            padding: 0.6rem 1.25rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: 600;
+        }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
+        .nav-toggle span { width: 24px; height: 2px; background: var(--text-primary); }
+
+        .page-header {
+            padding: 8rem 2rem 4rem; text-align: center;
+            background: var(--bg-deep); border-bottom: 1px solid var(--border);
+        }
+        .page-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: var(--text-bright); margin-bottom: 1rem; }
+        .page-subtitle { color: var(--text-secondary); }
+
+        .content { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+        .content h2 { font-family: var(--font-display); font-size: 1.25rem; color: var(--gold); margin: 2rem 0 1rem; }
+        .content h2:first-of-type { margin-top: 0; }
+        .content p { margin-bottom: 1rem; color: var(--text-primary); }
+        .content a { color: var(--gold); text-decoration: none; }
+        .content a:hover { color: var(--gold-light); }
+
+        .footer {
+            background: var(--bg-deep); border-top: 1px solid var(--border);
+            padding: 3rem 2rem; text-align: center;
+        }
+        .footer-copy { color: var(--text-muted); font-size: 0.85rem; }
+        .footer-copy a { color: var(--text-secondary); text-decoration: none; }
+        .footer-copy a:hover { color: var(--gold); }
+        .footer-links { margin-top: 1rem; display: flex; justify-content: center; gap: 2rem; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; }
+        .footer-links a:hover { color: var(--gold); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(8, 7, 6, 0.98); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
+            .nav-links.active { display: flex; }
+            .nav-toggle { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#c9a227"/>
+                <rect x="30" y="25" width="40" height="30" rx="3" fill="#080706"/>
+                <rect x="35" y="30" width="30" height="20" fill="#c9a227" opacity="0.3"/>
+                <rect x="38" y="60" width="24" height="4" fill="#080706"/>
+                <rect x="44" y="64" width="12" height="12" fill="#080706"/>
+            </svg>
+            <div class="nav-logo-text">
+                <span class="nav-logo-name">Ohio Teleprompter</span>
+                <span class="nav-logo-tagline">Powering Outstanding Performances</span>
+            </div>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#services" class="nav-link">Services</a>
+            <a href="index.html#coverage" class="nav-link">Coverage</a>
+            <a href="https://nationalteleprompter.com" class="nav-link" target="_blank">Network</a>
+            <a href="index.html#contact" class="nav-cta">Get a Quote</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="page-subtitle">Last updated: December 2024</p>
+    </header>
+
+    <main class="content">
+        <h2>Introduction</h2>
+        <p>Ohio Teleprompter ("we," "our," or "us"), a subsidiary of Claduta Corp, respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website or use our services.</p>
+
+        <h2>Information We Collect</h2>
+        <p>We may collect the following types of information:</p>
+        <p><strong>Contact Information:</strong> Name, email address, phone number, and company name when you submit our contact form or request a quote.</p>
+        <p><strong>Event Information:</strong> Details about your event, including location, date, and production requirements.</p>
+        <p><strong>Usage Data:</strong> Information about how you interact with our website, including pages visited and time spent on the site.</p>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <p>• Respond to your inquiries and provide quotes for our services</p>
+        <p>• Communicate with you about your events and our services</p>
+        <p>• Improve our website and services</p>
+        <p>• Comply with legal obligations</p>
+
+        <h2>Information Sharing</h2>
+        <p>We do not sell, trade, or otherwise transfer your personal information to third parties except as necessary to provide our services or as required by law. We may share information within the National Teleprompter network and with our parent company, Claduta Corp, for operational purposes.</p>
+
+        <h2>Data Security</h2>
+        <p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Our website uses Formspree for form submissions. Your form data is processed according to Formspree's privacy policy. We recommend reviewing their privacy practices.</p>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <p>• Access the personal information we hold about you</p>
+        <p>• Request correction of inaccurate information</p>
+        <p>• Request deletion of your personal information</p>
+        <p>• Opt out of marketing communications</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this privacy policy or our data practices, please contact us at:</p>
+        <p>Email: <a href="mailto:info@cladutacorp.com">info@cladutacorp.com</a></p>
+        <p>Phone: <a href="tel:727-623-2652">727-623-2652</a></p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-copy">© 2024 Ohio Teleprompter. A subsidiary of <a href="https://cladutacorp.com" target="_blank">Claduta Corp</a></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    </script>
+</body>
+</html>
