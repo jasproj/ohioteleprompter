@@ -1119,6 +1119,263 @@
             transform: translateY(0);
         }
 
+        /* Script Formatter Section */
+        .formatter {
+            padding: 6rem 2rem;
+            background: var(--bg-void);
+        }
+
+        .formatter-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .formatter-box {
+            background: var(--bg-elevated);
+            border: 2px dashed var(--border-light);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .formatter-box:hover,
+        .formatter-box.dragover {
+            border-color: var(--bronze);
+            background: var(--bg-card);
+        }
+
+        .formatter-box.has-file {
+            border-style: solid;
+            border-color: var(--bronze);
+        }
+
+        .formatter-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            color: var(--bronze);
+        }
+
+        .formatter-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-bright);
+            margin-bottom: 0.5rem;
+        }
+
+        .formatter-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .formatter-input {
+            display: none;
+        }
+
+        .formatter-filename {
+            margin-top: 1rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border-radius: 6px;
+            color: var(--bronze);
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .formatter-box.has-file .formatter-filename {
+            display: block;
+        }
+
+        .formatter-actions {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .formatter-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .formatter-btn-primary {
+            background: linear-gradient(135deg, var(--bronze), var(--copper-dark));
+            color: var(--bg-void);
+        }
+
+        .formatter-btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(205, 127, 50, 0.3);
+        }
+
+        .formatter-btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .formatter-btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+        }
+
+        .formatter-btn-secondary:hover {
+            border-color: var(--bronze);
+            color: var(--bronze);
+        }
+
+        .formatter-status {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--success);
+            display: none;
+        }
+
+        .formatter-status.visible {
+            display: block;
+        }
+
+        .formatter-status.error {
+            color: #e74c3c;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 2rem;
+            background: var(--bg-deep);
+            border-top: 1px solid var(--border);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 8, 6, 0.7) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            color: var(--text-bright);
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Service cards with images */
+        .service-card-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-card-img {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 8, 6, 0.95);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-light);
+            border-radius: 50%;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: var(--bronze);
+            color: var(--bg-void);
+        }
+
         /* Responsive */
         @media (max-width: 968px) {
             .footer-grid {
@@ -1160,6 +1417,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -1198,7 +1459,9 @@
             </div>
         </a>
         <div class="nav-links" id="navLinks">
+            <a href="#tool" class="nav-link">Script Formatter</a>
             <a href="#services" class="nav-link">Services</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
             <a href="#coverage" class="nav-link">Coverage</a>
             <a href="https://nationalteleprompter.com" class="nav-link" target="_blank">Network</a>
             <a href="#contact" class="nav-cta">Get a Quote</a>
@@ -1286,8 +1549,8 @@
             <h1 class="hero-title">Professional Teleprompter Services for <em>Ohio</em></h1>
             <p class="hero-subtitle">Expert teleprompting for live events, corporate productions, and broadcast across Columbus, Cleveland, Cincinnati, and beyond. Part of the National Teleprompter network.</p>
             <div class="hero-ctas">
-                <a href="#contact" class="btn-primary">Request a Quote</a>
-                <a href="#services" class="btn-secondary">View Services</a>
+                <a href="#tool" class="btn-primary">Try Script Formatter</a>
+                <a href="#contact" class="btn-secondary">Request Quote</a>
             </div>
         </div>
 
@@ -1332,33 +1595,50 @@
         </div>
         <div class="services-grid">
             <div class="service-card reveal">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                </svg>
+                <img src="img-ballroom.jpg" alt="Live event teleprompter setup in ballroom" class="service-card-img">
                 <h3 class="service-name">Live Events</h3>
                 <p class="service-desc">Trade shows, conferences, political rallies, sports events, and concerts. Real-time script adjustment and flawless delivery under pressure.</p>
             </div>
             <div class="service-card reveal">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                </svg>
+                <img src="img-station.jpg" alt="Corporate event teleprompter operator station" class="service-card-img">
                 <h3 class="service-name">Corporate</h3>
                 <p class="service-desc">Executive communications, shareholder meetings, training videos, and internal broadcasts. Professional presence for professional settings.</p>
             </div>
             <div class="service-card reveal">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/>
-                </svg>
+                <img src="img-outdoor.jpg" alt="Video production set with teleprompter" class="service-card-img">
                 <h3 class="service-name">Video Production</h3>
                 <p class="service-desc">Infomercials, promotional videos, social content, and scripted shoots. We work with talent to keep takes sharp and natural.</p>
             </div>
             <div class="service-card reveal">
-                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
+                <img src="img-prompter.jpg" alt="Professional teleprompter display" class="service-card-img">
                 <h3 class="service-name">Broadcast</h3>
                 <p class="service-desc">News studios, talk shows, and live broadcasts. Integration with existing broadcast systems and experienced studio operators.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Script Formatter Section -->
+    <section class="formatter" id="tool">
+        <div class="section-header reveal">
+            <div class="section-label">Free Tool</div>
+            <h2 class="section-title">Script Formatter</h2>
+            <p class="section-subtitle">Upload your script and we'll format it for teleprompter delivery—line breaks after each sentence, ready for show day.</p>
+        </div>
+        <div class="formatter-container">
+            <div class="formatter-box reveal" id="formatterBox">
+                <svg class="formatter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <div class="formatter-title">Drop Script Here</div>
+                <div class="formatter-subtitle">TXT or DOCX files</div>
+                <input type="file" class="formatter-input" id="formatterInput" accept=".txt,.docx">
+                <div class="formatter-filename" id="formatterFilename"></div>
+            </div>
+            <div class="formatter-actions">
+                <button class="formatter-btn formatter-btn-primary" id="downloadBtn" disabled>Download RTF</button>
+                <button class="formatter-btn formatter-btn-secondary" id="resetBtn">Format Another</button>
+            </div>
+            <div class="formatter-status" id="formatterStatus"></div>
         </div>
     </section>
 
@@ -1411,6 +1691,39 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header reveal">
+            <div class="section-label">Our Work</div>
+            <h2 class="section-title">On Set & On Stage</h2>
+            <p class="section-subtitle">From corporate ballrooms to outdoor productions, we deliver professional teleprompting everywhere.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item reveal" onclick="openLightbox('img-ballroom.jpg')">
+                <img src="img-ballroom.jpg" alt="Corporate ballroom event setup" loading="lazy">
+                <div class="gallery-caption">Corporate Event</div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('img-outdoor.jpg')">
+                <img src="img-outdoor.jpg" alt="Outdoor video production" loading="lazy">
+                <div class="gallery-caption">Video Production</div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('img-prompter.jpg')">
+                <img src="img-prompter.jpg" alt="Teleprompter display" loading="lazy">
+                <div class="gallery-caption">On-Camera Prompter</div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('img-station.jpg')">
+                <img src="img-station.jpg" alt="Operator station at gala" loading="lazy">
+                <div class="gallery-caption">Operator Station</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Gallery image" id="lightboxImg">
+    </div>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="section-header reveal">
@@ -1434,7 +1747,7 @@
                     727-623-2652
                 </a>
             </div>
-            <form class="contact-form reveal" action="https://formspree.io/f/mdkqplqp" method="POST">
+            <form class="contact-form reveal" action="https://formspree.io/f/mjknplbe" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label class="form-label" for="name">Full Name</label>
@@ -1570,6 +1883,178 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         reveals.forEach(el => revealObserver.observe(el));
+
+        // Script Formatter
+        const formatterBox = document.getElementById('formatterBox');
+        const formatterInput = document.getElementById('formatterInput');
+        const formatterFilename = document.getElementById('formatterFilename');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const formatterStatus = document.getElementById('formatterStatus');
+        
+        let formattedContent = '';
+        let originalFilename = '';
+
+        // Load mammoth.js for DOCX parsing
+        const mammothScript = document.createElement('script');
+        mammothScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js';
+        document.head.appendChild(mammothScript);
+
+        // Drag and drop handlers
+        formatterBox.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            formatterBox.classList.add('dragover');
+        });
+
+        formatterBox.addEventListener('dragleave', () => {
+            formatterBox.classList.remove('dragover');
+        });
+
+        formatterBox.addEventListener('drop', (e) => {
+            e.preventDefault();
+            formatterBox.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        formatterBox.addEventListener('click', () => {
+            formatterInput.click();
+        });
+
+        formatterInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        async function handleFile(file) {
+            const ext = file.name.split('.').pop().toLowerCase();
+            originalFilename = file.name.replace(/\.[^/.]+$/, '');
+            
+            if (ext !== 'txt' && ext !== 'docx') {
+                showStatus('Please upload a TXT or DOCX file.', true);
+                return;
+            }
+
+            formatterFilename.textContent = file.name;
+            formatterBox.classList.add('has-file');
+            showStatus('Processing...', false);
+
+            try {
+                let text = '';
+                
+                if (ext === 'txt') {
+                    text = await file.text();
+                } else if (ext === 'docx') {
+                    // Wait for mammoth to load if needed
+                    if (typeof mammoth === 'undefined') {
+                        await new Promise(resolve => {
+                            mammothScript.onload = resolve;
+                        });
+                    }
+                    const arrayBuffer = await file.arrayBuffer();
+                    const result = await mammoth.extractRawText({ arrayBuffer });
+                    text = result.value;
+                }
+
+                // Format: add line breaks after sentences
+                formattedContent = formatScript(text);
+                downloadBtn.disabled = false;
+                showStatus('Ready to download!', false);
+            } catch (err) {
+                showStatus('Error processing file. Please try again.', true);
+                console.error(err);
+            }
+        }
+
+        function formatScript(text) {
+            // Normalize whitespace
+            text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+            
+            // Split into paragraphs
+            const paragraphs = text.split(/\n\s*\n/);
+            
+            const formatted = paragraphs.map(para => {
+                // Clean up the paragraph
+                para = para.replace(/\s+/g, ' ').trim();
+                
+                // Add line breaks after sentence-ending punctuation
+                // But be careful with abbreviations like Mr., Dr., etc.
+                para = para.replace(/([.!?])\s+(?=[A-Z])/g, '$1\n\n');
+                
+                return para;
+            }).join('\n\n\n');
+            
+            return formatted;
+        }
+
+        function showStatus(message, isError) {
+            formatterStatus.textContent = message;
+            formatterStatus.classList.toggle('error', isError);
+            formatterStatus.classList.add('visible');
+        }
+
+        downloadBtn.addEventListener('click', () => {
+            if (!formattedContent) return;
+            
+            // Create RTF content
+            const rtfContent = '{\\rtf1\\ansi\\deff0 {\\fonttbl {\\f0 Arial;}}\\f0\\fs28 ' + 
+                formattedContent
+                    .replace(/\\/g, '\\\\')
+                    .replace(/\{/g, '\\{')
+                    .replace(/\}/g, '\\}')
+                    .replace(/\n/g, '\\par ') +
+                '}';
+            
+            const blob = new Blob([rtfContent], { type: 'application/rtf' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = originalFilename + '_formatted.rtf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        resetBtn.addEventListener('click', () => {
+            formatterBox.classList.remove('has-file');
+            formatterFilename.textContent = '';
+            formatterInput.value = '';
+            formattedContent = '';
+            originalFilename = '';
+            downloadBtn.disabled = true;
+            formatterStatus.classList.remove('visible');
+        });
+
+        // Lightbox functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
 
     </script>
 </body>
