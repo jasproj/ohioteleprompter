@@ -208,21 +208,35 @@
         }
 
         :root {
-            --bg-void: #0a0806;
-            --bg-deep: #0f0c09;
-            --bg-elevated: #1a1510;
-            --bg-card: #211a14;
-            --bronze: #cd7f32;
-            --bronze-light: #daa06d;
-            --copper: #b87333;
-            --copper-dark: #8b5a2b;
-            --text-bright: #faf6f0;
-            --text-primary: #e8dfd4;
-            --text-secondary: #a89a8a;
-            --text-muted: #6b5d4f;
+            /* Ohio Teleprompter Color Scheme */
+            --gold: #F5B84C;
+            --gold-light: #F5C87C;
+            --gold-dark: #D4922A;
+            --gold-deep: #B87A1A;
+            
+            /* Backgrounds */
+            --bg-void: #0A0908;
+            --bg-deep: #0F0D0A;
+            --bg-elevated: #1A1612;
+            --bg-card: #211C16;
+            
+            /* Text */
+            --text-bright: #FAF7F0;
+            --text-primary: #E8E0D4;
+            --text-secondary: #A8988A;
+            --text-muted: #6B5B4D;
+            
+            /* Utility */
             --success: #5cb85c;
-            --border: rgba(205, 127, 50, 0.1);
-            --border-light: rgba(205, 127, 50, 0.2);
+            --border: rgba(245, 184, 76, 0.1);
+            --border-light: rgba(245, 184, 76, 0.2);
+            
+            /* Spotlight Colors */
+            --spot-core: rgba(255, 215, 140, 0.32);
+            --spot-mid: rgba(212, 146, 42, 0.22);
+            --spot-outer: rgba(245, 200, 124, 0.1);
+            
+            /* Typography */
             --font-display: Arial, 'Helvetica Neue', sans-serif;
             --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
@@ -332,12 +346,12 @@
             left: 0;
             width: 0;
             height: 1px;
-            background: var(--bronze);
+            background: var(--gold);
             transition: width 0.3s ease;
         }
 
         .nav-link:hover {
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .nav-link:hover::after {
@@ -345,7 +359,7 @@
         }
 
         .nav-cta {
-            background: linear-gradient(135deg, var(--bronze), var(--copper-dark));
+            background: linear-gradient(135deg, var(--gold), var(--gold-deep));
             color: var(--bg-void);
             padding: 0.6rem 1.25rem;
             border-radius: 4px;
@@ -402,8 +416,8 @@
                     90deg,
                     transparent 0px,
                     transparent 100px,
-                    rgba(205, 127, 50, 0.02) 100px,
-                    rgba(205, 127, 50, 0.02) 101px
+                    rgba(245, 184, 76, 0.02) 100px,
+                    rgba(245, 184, 76, 0.02) 101px
                 ),
                 /* Subtle vignette */
                 radial-gradient(ellipse at center, transparent 0%, var(--bg-void) 90%);
@@ -436,7 +450,7 @@
             transform: translateX(-50%);
             width: 60%;
             height: 80%;
-            background: radial-gradient(ellipse at top center, rgba(255, 230, 180, 0.2) 0%, rgba(255, 200, 140, 0.1) 20%, transparent 50%);
+            background: radial-gradient(ellipse at top center, rgba(255, 215, 140, 0.22) 0%, rgba(212, 146, 42, 0.12) 20%, transparent 50%);
             pointer-events: none;
             animation: pulseGlow 4s ease-in-out infinite;
         }
@@ -470,9 +484,9 @@
         .fixture {
             width: 14px;
             height: 14px;
-            background: radial-gradient(circle, rgba(255, 230, 180, 1) 0%, rgba(255, 200, 120, 0.8) 30%, rgba(205, 127, 50, 0.4) 60%, transparent 80%);
+            background: radial-gradient(circle, rgba(255, 220, 150, 1) 0%, rgba(212, 146, 42, 0.8) 30%, rgba(245, 184, 76, 0.4) 60%, transparent 80%);
             border-radius: 50%;
-            box-shadow: 0 0 30px rgba(255, 220, 160, 0.8), 0 0 60px rgba(205, 127, 50, 0.5);
+            box-shadow: 0 0 30px rgba(255, 215, 140, 0.8), 0 0 60px rgba(245, 184, 76, 0.5);
             animation: fixtureGlow 3s ease-in-out infinite;
         }
 
@@ -501,7 +515,7 @@
         .spotlight-1 {
             left: 20%;
             border-width: 0 60px 500px 60px;
-            border-color: transparent transparent rgba(255, 220, 160, 0.15) transparent;
+            border-color: transparent transparent rgba(255, 215, 140, 0.15) transparent;
             animation-delay: 0s;
         }
 
@@ -509,14 +523,14 @@
             left: 50%;
             transform: translateX(-50%);
             border-width: 0 80px 550px 80px;
-            border-color: transparent transparent rgba(255, 230, 180, 0.2) transparent;
+            border-color: transparent transparent rgba(255, 220, 150, 0.2) transparent;
             animation-delay: 1s;
         }
 
         .spotlight-3 {
             right: 20%;
             border-width: 0 60px 500px 60px;
-            border-color: transparent transparent rgba(255, 220, 160, 0.15) transparent;
+            border-color: transparent transparent rgba(255, 215, 140, 0.15) transparent;
             animation-delay: 2s;
         }
 
@@ -531,7 +545,7 @@
             bottom: 15%;
             width: 200px;
             height: 60px;
-            background: radial-gradient(ellipse, rgba(255, 220, 160, 0.25) 0%, rgba(205, 127, 50, 0.1) 40%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(255, 215, 140, 0.25) 0%, rgba(245, 184, 76, 0.1) 40%, transparent 70%);
             border-radius: 50%;
             filter: blur(15px);
         }
@@ -550,7 +564,7 @@
                 /* Top rigging/truss hint */
                 linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 15%),
                 /* Stage floor reflection */
-                linear-gradient(0deg, rgba(205, 127, 50, 0.08) 0%, transparent 25%);
+                linear-gradient(0deg, rgba(245, 184, 76, 0.08) 0%, transparent 25%);
         }
 
         .hero-content {
@@ -609,7 +623,7 @@
 
         .hero-title em {
             font-style: normal;
-            color: var(--bronze);
+            color: var(--gold);
             position: relative;
         }
 
@@ -641,7 +655,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--bronze), var(--copper-dark));
+            background: linear-gradient(135deg, var(--gold), var(--gold-deep));
             color: var(--bg-void);
             padding: 0.9rem 2rem;
             border-radius: 4px;
@@ -671,8 +685,8 @@
         }
 
         .btn-secondary:hover {
-            border-color: var(--bronze);
-            color: var(--bronze);
+            border-color: var(--gold);
+            color: var(--gold);
             background: rgba(201, 162, 39, 0.05);
         }
 
@@ -723,7 +737,7 @@
         }
 
         .marquee-item:hover {
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         /* Services Section */
@@ -753,7 +767,7 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.25em;
-            color: var(--bronze);
+            color: var(--gold);
             margin-bottom: 1rem;
         }
 
@@ -794,7 +808,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--bronze), var(--copper-dark));
+            background: linear-gradient(90deg, var(--gold), var(--gold-deep));
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
@@ -813,7 +827,7 @@
             width: 48px;
             height: 48px;
             margin-bottom: 1.25rem;
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .service-name {
@@ -837,9 +851,9 @@
 
         .coverage-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -854,21 +868,6 @@
             overflow: hidden;
         }
 
-        .city-card .landmark {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            height: 70%;
-            opacity: 0.08;
-            pointer-events: none;
-        }
-
-        .city-card:hover .landmark {
-            opacity: 0.12;
-        }
-
         .city-card::after {
             content: '';
             position: absolute;
@@ -877,14 +876,13 @@
             transform: translateX(-50%);
             width: 0;
             height: 3px;
-            background: var(--bronze);
+            background: var(--gold);
             transition: width 0.4s ease;
-            z-index: 2;
         }
 
         .city-card:hover {
             transform: translateY(-3px);
-            border-color: var(--bronze);
+            border-color: var(--gold);
         }
 
         .city-card:hover::after {
@@ -894,8 +892,6 @@
         .city-name {
             font-family: var(--font-display);
             font-size: 1.25rem;
-            position: relative;
-            z-index: 1;
             color: var(--text-bright);
             margin-bottom: 0.5rem;
         }
@@ -905,8 +901,6 @@
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            position: relative;
-            z-index: 1;
         }
 
         /* Stats Section */
@@ -933,7 +927,7 @@
         .stat-value {
             font-family: var(--font-display);
             font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--bronze);
+            color: var(--gold);
             line-height: 1;
             margin-bottom: 0.5rem;
         }
@@ -980,13 +974,13 @@
         }
 
         .contact-method:hover {
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .contact-method svg {
             width: 20px;
             height: 20px;
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .contact-form {
@@ -1035,7 +1029,7 @@
         .form-input:focus,
         .form-textarea:focus {
             outline: none;
-            border-color: var(--bronze);
+            border-color: var(--gold);
             box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1);
         }
 
@@ -1113,7 +1107,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .footer-bottom {
@@ -1140,7 +1134,7 @@
         }
 
         .footer-copy a:hover {
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .footer-legal {
@@ -1156,7 +1150,7 @@
         }
 
         .footer-legal a:hover {
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         /* Animations for scroll reveal */
@@ -1194,20 +1188,20 @@
 
         .formatter-box:hover,
         .formatter-box.dragover {
-            border-color: var(--bronze);
+            border-color: var(--gold);
             background: var(--bg-card);
         }
 
         .formatter-box.has-file {
             border-style: solid;
-            border-color: var(--bronze);
+            border-color: var(--gold);
         }
 
         .formatter-icon {
             width: 48px;
             height: 48px;
             margin: 0 auto 1rem;
-            color: var(--bronze);
+            color: var(--gold);
         }
 
         .formatter-title {
@@ -1232,7 +1226,7 @@
             padding: 0.75rem 1rem;
             background: var(--bg-card);
             border-radius: 6px;
-            color: var(--bronze);
+            color: var(--gold);
             font-size: 0.9rem;
             display: none;
         }
@@ -1260,13 +1254,13 @@
         }
 
         .formatter-btn-primary {
-            background: linear-gradient(135deg, var(--bronze), var(--copper-dark));
+            background: linear-gradient(135deg, var(--gold), var(--gold-deep));
             color: var(--bg-void);
         }
 
         .formatter-btn-primary:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(205, 127, 50, 0.3);
+            box-shadow: 0 4px 15px rgba(245, 184, 76, 0.3);
         }
 
         .formatter-btn-primary:disabled {
@@ -1281,8 +1275,8 @@
         }
 
         .formatter-btn-secondary:hover {
-            border-color: var(--bronze);
-            color: var(--bronze);
+            border-color: var(--gold);
+            color: var(--gold);
         }
 
         .formatter-status {
@@ -1378,18 +1372,9 @@
             transition: all 0.3s ease;
         }
 
-        .service-card-img.crop-bottom {
-            object-position: center 20%;
-            transform: scale(1.08);
-        }
-
         .service-card:hover .service-card-img {
             opacity: 1;
             transform: scale(1.02);
-        }
-
-        .service-card:hover .service-card-img.crop-bottom {
-            transform: scale(1.10);
         }
 
         /* Lightbox */
@@ -1434,7 +1419,7 @@
         }
 
         .lightbox-close:hover {
-            background: var(--bronze);
+            background: var(--gold);
             color: var(--bg-void);
         }
 
@@ -1512,9 +1497,9 @@
     <nav class="nav" id="nav">
         <a href="#" class="nav-logo">
             <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" fill="#cd7f32"/>
+                <circle cx="50" cy="50" r="45" fill="#F5B84C"/>
                 <rect x="30" y="25" width="40" height="30" rx="3" fill="#080706"/>
-                <rect x="35" y="30" width="30" height="20" fill="#cd7f32" opacity="0.3"/>
+                <rect x="35" y="30" width="30" height="20" fill="#F5B84C" opacity="0.3"/>
                 <line x1="35" y1="36" x2="65" y2="36" stroke="#6b8fa3" stroke-width="2" opacity="0.7"/>
                 <line x1="35" y1="42" x2="60" y2="42" stroke="#6b8fa3" stroke-width="2" opacity="0.5"/>
                 <rect x="38" y="60" width="24" height="4" fill="#080706"/>
@@ -1560,35 +1545,35 @@
                         <stop offset="100%" style="stop-color:rgba(55,42,30,0.95)"/>
                     </linearGradient>
                     <radialGradient id="spotGlow" cx="50%" cy="0%" r="80%">
-                        <stop offset="0%" style="stop-color:rgba(255,220,160,0.3)"/>
+                        <stop offset="0%" style="stop-color:rgba(255,215,140,0.3)"/>
                         <stop offset="100%" style="stop-color:transparent"/>
                     </radialGradient>
                 </defs>
                 
                 <!-- Stage Floor -->
                 <rect x="0" y="280" width="1200" height="120" fill="url(#stageFloor)"/>
-                <line x1="0" y1="280" x2="1200" y2="280" stroke="rgba(205,127,50,0.2)" stroke-width="2"/>
+                <line x1="0" y1="280" x2="1200" y2="280" stroke="rgba(245,184,76,0.2)" stroke-width="2"/>
                 
                 <!-- Floor Reflection Lines -->
-                <line x1="200" y1="300" x2="400" y2="400" stroke="rgba(205,127,50,0.05)" stroke-width="1"/>
-                <line x1="500" y1="300" x2="600" y2="400" stroke="rgba(205,127,50,0.05)" stroke-width="1"/>
-                <line x1="700" y1="300" x2="600" y2="400" stroke="rgba(205,127,50,0.05)" stroke-width="1"/>
-                <line x1="1000" y1="300" x2="800" y2="400" stroke="rgba(205,127,50,0.05)" stroke-width="1"/>
+                <line x1="200" y1="300" x2="400" y2="400" stroke="rgba(245,184,76,0.05)" stroke-width="1"/>
+                <line x1="500" y1="300" x2="600" y2="400" stroke="rgba(245,184,76,0.05)" stroke-width="1"/>
+                <line x1="700" y1="300" x2="600" y2="400" stroke="rgba(245,184,76,0.05)" stroke-width="1"/>
+                <line x1="1000" y1="300" x2="800" y2="400" stroke="rgba(245,184,76,0.05)" stroke-width="1"/>
                 
                 <!-- Center Podium -->
                 <rect x="540" y="200" width="120" height="80" fill="url(#podiumGrad)" rx="3"/>
                 <rect x="535" y="195" width="130" height="10" fill="url(#podiumTop)" rx="2"/>
                 <!-- Podium front panel accent -->
-                <rect x="555" y="220" width="90" height="50" fill="rgba(205,127,50,0.08)" rx="2"/>
+                <rect x="555" y="220" width="90" height="50" fill="rgba(245,184,76,0.08)" rx="2"/>
                 <!-- Microphone hint -->
                 <line x1="600" y1="170" x2="600" y2="195" stroke="rgba(100,80,60,0.6)" stroke-width="2"/>
                 <circle cx="600" cy="165" r="5" fill="rgba(60,50,40,0.8)"/>
                 
                 <!-- Side Monitors (teleprompters) -->
                 <rect x="380" y="220" width="60" height="45" fill="rgba(20,15,10,0.9)" rx="2"/>
-                <rect x="385" y="225" width="50" height="35" fill="rgba(205,127,50,0.1)" rx="1"/>
+                <rect x="385" y="225" width="50" height="35" fill="rgba(245,184,76,0.1)" rx="1"/>
                 <rect x="760" y="220" width="60" height="45" fill="rgba(20,15,10,0.9)" rx="2"/>
-                <rect x="765" y="225" width="50" height="35" fill="rgba(205,127,50,0.1)" rx="1"/>
+                <rect x="765" y="225" width="50" height="35" fill="rgba(245,184,76,0.1)" rx="1"/>
                 
                 <!-- Monitor Stands -->
                 <rect x="405" y="265" width="10" height="15" fill="rgba(40,32,24,0.9)"/>
@@ -1670,32 +1655,22 @@
             <div class="service-card reveal">
                 <img src="img-stage.jpg" alt="Live event with speaker on stage" class="service-card-img">
                 <h3 class="service-name">Live Events</h3>
-                <p class="service-desc">Trade shows, conferences, keynotes, and concerts. Real-time script adjustment and flawless delivery under pressure.</p>
+                <p class="service-desc">Trade shows, conferences, political rallies, sports events, and concerts. Real-time script adjustment and flawless delivery under pressure.</p>
             </div>
             <div class="service-card reveal">
                 <img src="img-gala.jpg" alt="Corporate gala teleprompter station" class="service-card-img">
                 <h3 class="service-name">Corporate</h3>
-                <p class="service-desc">Executive communications, shareholder meetings, training videos, and internal broadcasts.</p>
+                <p class="service-desc">Executive communications, shareholder meetings, training videos, and internal broadcasts. Professional presence for professional settings.</p>
             </div>
             <div class="service-card reveal">
                 <img src="img-montel.jpg" alt="Outdoor video production set" class="service-card-img">
                 <h3 class="service-name">Video Production</h3>
-                <p class="service-desc">Infomercials, promotional videos, social content, and scripted shoots with talent.</p>
+                <p class="service-desc">Infomercials, promotional videos, social content, and scripted shoots. We work with talent to keep takes sharp and natural.</p>
             </div>
             <div class="service-card reveal">
-                <img src="img-rig.jpg" alt="Professional teleprompter on camera rig" class="service-card-img crop-bottom">
+                <img src="img-rig.jpg" alt="Professional teleprompter on camera rig" class="service-card-img">
                 <h3 class="service-name">Broadcast</h3>
-                <p class="service-desc">News studios, talk shows, and live broadcasts. Integration with existing systems.</p>
-            </div>
-            <div class="service-card reveal">
-                <img src="img-ballroom.jpg" alt="Sports event setup" class="service-card-img">
-                <h3 class="service-name">Sports & Entertainment</h3>
-                <p class="service-desc">Award shows, sports events, celebrity appearances, and entertainment productions.</p>
-            </div>
-            <div class="service-card reveal">
-                <img src="img-outdoor.jpg" alt="Political and nonprofit event" class="service-card-img">
-                <h3 class="service-name">Political & Non-Profit</h3>
-                <p class="service-desc">Campaign rallies, fundraising galas, advocacy events, and public addresses.</p>
+                <p class="service-desc">News studios, talk shows, and live broadcasts. Integration with existing broadcast systems and experienced studio operators.</p>
             </div>
         </div>
     </section>
@@ -1734,58 +1709,20 @@
         </div>
         <div class="coverage-grid">
             <div class="city-card reveal">
-                <!-- Columbus Skyline -->
-                <svg class="landmark" viewBox="0 0 100 60" fill="currentColor">
-                    <rect x="35" y="10" width="12" height="50"/><rect x="50" y="5" width="15" height="55"/><rect x="68" y="15" width="10" height="45"/>
-                    <rect x="20" y="25" width="10" height="35"/><rect x="82" y="20" width="8" height="40"/><rect x="5" y="35" width="12" height="25"/>
-                </svg>
                 <h3 class="city-name">Columbus</h3>
-                <p class="city-subtitle">State Capital • Corporate</p>
+                <p class="city-subtitle">State Capital • Corporate Hub</p>
             </div>
             <div class="city-card reveal">
-                <!-- Cleveland Skyline with Key Tower -->
-                <svg class="landmark" viewBox="0 0 100 60" fill="currentColor">
-                    <rect x="40" y="5" width="10" height="55"/><rect x="43" y="0" width="4" height="8"/><rect x="55" y="12" width="12" height="48"/>
-                    <rect x="25" y="20" width="10" height="40"/><rect x="70" y="18" width="10" height="42"/><rect x="10" y="30" width="10" height="30"/>
-                </svg>
                 <h3 class="city-name">Cleveland</h3>
                 <p class="city-subtitle">Sports • Entertainment</p>
             </div>
             <div class="city-card reveal">
-                <!-- Cincinnati with Roebling Bridge hint -->
-                <svg class="landmark" viewBox="0 0 100 60" fill="currentColor">
-                    <rect x="35" y="15" width="14" height="45"/><rect x="52" y="10" width="12" height="50"/><rect x="20" y="25" width="10" height="35"/>
-                    <rect x="68" y="20" width="10" height="40"/><path d="M5,55 Q50,40 95,55" stroke="currentColor" fill="none" stroke-width="2"/>
-                </svg>
                 <h3 class="city-name">Cincinnati</h3>
                 <p class="city-subtitle">Corporate HQs • Events</p>
             </div>
             <div class="city-card reveal">
-                <!-- Dayton with aviation hint -->
-                <svg class="landmark" viewBox="0 0 100 60" fill="currentColor">
-                    <rect x="40" y="20" width="10" height="40"/><rect x="55" y="25" width="8" height="35"/><rect x="25" y="30" width="10" height="30"/>
-                    <path d="M20,15 L50,25 L80,15 L50,20 Z" fill="currentColor" opacity="0.5"/>
-                </svg>
-                <h3 class="city-name">Dayton</h3>
-                <p class="city-subtitle">Aviation • Innovation</p>
-            </div>
-            <div class="city-card reveal">
-                <!-- Toledo with glass city hint -->
-                <svg class="landmark" viewBox="0 0 100 60" fill="currentColor">
-                    <rect x="30" y="15" width="15" height="45"/><rect x="48" y="20" width="12" height="40"/><rect x="65" y="25" width="10" height="35"/>
-                    <rect x="15" y="30" width="10" height="30"/><rect x="80" y="30" width="8" height="30"/>
-                </svg>
-                <h3 class="city-name">Toledo</h3>
-                <p class="city-subtitle">Glass City • Industry</p>
-            </div>
-            <div class="city-card reveal">
-                <!-- Ohio state icon -->
-                <svg class="landmark" viewBox="0 0 100 60" fill="currentColor">
-                    <path d="M20,10 L80,10 L85,30 L80,50 L20,50 L15,30 Z" opacity="0.3"/>
-                    <text x="50" y="35" text-anchor="middle" font-size="14" fill="currentColor">OH</text>
-                </svg>
                 <h3 class="city-name">+ Statewide</h3>
-                <p class="city-subtitle">Akron • Youngstown • More</p>
+                <p class="city-subtitle">Dayton • Toledo • Akron</p>
             </div>
         </div>
     </section>
@@ -1931,9 +1868,9 @@
             <div class="footer-brand">
                 <a href="#" class="footer-logo">
                     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="45" fill="#cd7f32"/>
+                        <circle cx="50" cy="50" r="45" fill="#F5B84C"/>
                         <rect x="30" y="25" width="40" height="30" rx="3" fill="#080706"/>
-                        <rect x="35" y="30" width="30" height="20" fill="#cd7f32" opacity="0.3"/>
+                        <rect x="35" y="30" width="30" height="20" fill="#F5B84C" opacity="0.3"/>
                         <rect x="38" y="60" width="24" height="4" fill="#080706"/>
                         <rect x="44" y="64" width="12" height="12" fill="#080706"/>
                     </svg>
