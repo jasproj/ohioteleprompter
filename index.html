@@ -1350,16 +1350,17 @@
         /* Service cards with images */
         .service-card-img {
             width: 100%;
-            height: 140px;
+            height: 160px;
             object-fit: cover;
             border-radius: 6px;
             margin-bottom: 1rem;
-            opacity: 0.85;
-            transition: opacity 0.3s ease;
+            opacity: 0.9;
+            transition: all 0.3s ease;
         }
 
         .service-card:hover .service-card-img {
             opacity: 1;
+            transform: scale(1.02);
         }
 
         /* Lightbox */
@@ -1420,6 +1421,11 @@
 
             .contact-info {
                 text-align: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.75rem;
             }
         }
 
@@ -1633,22 +1639,22 @@
         </div>
         <div class="services-grid">
             <div class="service-card reveal">
-                <img src="img-ballroom.jpg" alt="Live event teleprompter setup in ballroom" class="service-card-img">
+                <img src="img-stage.jpg" alt="Live event with speaker on stage" class="service-card-img">
                 <h3 class="service-name">Live Events</h3>
                 <p class="service-desc">Trade shows, conferences, political rallies, sports events, and concerts. Real-time script adjustment and flawless delivery under pressure.</p>
             </div>
             <div class="service-card reveal">
-                <img src="img-station.jpg" alt="Corporate event teleprompter operator station" class="service-card-img">
+                <img src="img-gala.jpg" alt="Corporate gala teleprompter station" class="service-card-img">
                 <h3 class="service-name">Corporate</h3>
                 <p class="service-desc">Executive communications, shareholder meetings, training videos, and internal broadcasts. Professional presence for professional settings.</p>
             </div>
             <div class="service-card reveal">
-                <img src="img-outdoor.jpg" alt="Video production set with teleprompter" class="service-card-img">
+                <img src="img-montel.jpg" alt="Outdoor video production set" class="service-card-img">
                 <h3 class="service-name">Video Production</h3>
                 <p class="service-desc">Infomercials, promotional videos, social content, and scripted shoots. We work with talent to keep takes sharp and natural.</p>
             </div>
             <div class="service-card reveal">
-                <img src="img-prompter.jpg" alt="Professional teleprompter display" class="service-card-img">
+                <img src="img-rig.jpg" alt="Professional teleprompter on camera rig" class="service-card-img">
                 <h3 class="service-name">Broadcast</h3>
                 <p class="service-desc">News studios, talk shows, and live broadcasts. Integration with existing broadcast systems and experienced studio operators.</p>
             </div>
@@ -1737,12 +1743,28 @@
             <p class="section-subtitle">From corporate ballrooms to outdoor productions, we deliver professional teleprompting everywhere.</p>
         </div>
         <div class="gallery-grid">
+            <div class="gallery-item reveal" onclick="openLightbox('img-stage.jpg')">
+                <img src="img-stage.jpg" alt="Speaker on stage at live event" loading="lazy">
+                <div class="gallery-caption">Live Event</div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('img-gala.jpg')">
+                <img src="img-gala.jpg" alt="Gala operator station" loading="lazy">
+                <div class="gallery-caption">Corporate Gala</div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('img-rig.jpg')">
+                <img src="img-rig.jpg" alt="Teleprompter camera rig" loading="lazy">
+                <div class="gallery-caption">Camera Rig</div>
+            </div>
+            <div class="gallery-item reveal" onclick="openLightbox('img-montel.jpg')">
+                <img src="img-montel.jpg" alt="Outdoor production shoot" loading="lazy">
+                <div class="gallery-caption">Location Shoot</div>
+            </div>
             <div class="gallery-item reveal" onclick="openLightbox('img-ballroom.jpg')">
-                <img src="img-ballroom.jpg" alt="Corporate ballroom event setup" loading="lazy">
-                <div class="gallery-caption">Corporate Event</div>
+                <img src="img-ballroom.jpg" alt="Corporate ballroom setup" loading="lazy">
+                <div class="gallery-caption">Ballroom Setup</div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox('img-outdoor.jpg')">
-                <img src="img-outdoor.jpg" alt="Outdoor video production" loading="lazy">
+                <img src="img-outdoor.jpg" alt="Waterfront video production" loading="lazy">
                 <div class="gallery-caption">Video Production</div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox('img-prompter.jpg')">
@@ -1750,7 +1772,7 @@
                 <div class="gallery-caption">On-Camera Prompter</div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox('img-station.jpg')">
-                <img src="img-station.jpg" alt="Operator station at gala" loading="lazy">
+                <img src="img-station.jpg" alt="Operator workstation" loading="lazy">
                 <div class="gallery-caption">Operator Station</div>
             </div>
         </div>
