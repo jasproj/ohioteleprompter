@@ -3,6 +3,7 @@ layout: default
 title: "Teleprompter Speed: Finding the Right Pace"
 description: "Learn how to set and adjust teleprompter scroll speed for natural, confident delivery. Tips for speakers and operators on finding the perfect pace."
 canonical_permalink: "/blog/teleprompter-speed-pacing.html"
+robots: "noindex, follow"
 ---
 
 One of the most common questions we get from first-time teleprompter users: "How fast should it scroll?" The answer is simple in theory—match your natural speaking pace—but finding that sweet spot takes practice and good communication with your operator.

@@ -2,6 +2,7 @@
 layout: default
 title: "Outdoor & Stadium Event Teleprompter Services"
 description: "Outdoor festivals, stadium events, large conventions, major public events — outdoor and stadium productions require specialized teleprompter equipment..."
+robots: "noindex, follow"
 ---
 # Outdoor & Stadium Event Teleprompter Services
 

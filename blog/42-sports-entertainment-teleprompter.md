@@ -2,6 +2,7 @@
 layout: default
 title: "Sports & Entertainment Event Teleprompter Services"
 description: "Sports events, award shows, entertainment productions, celebrity appearances — entertainment industry demands professional presentation infrastructure."
+robots: "noindex, follow"
 ---
 # Sports & Entertainment Event Teleprompter Services
 

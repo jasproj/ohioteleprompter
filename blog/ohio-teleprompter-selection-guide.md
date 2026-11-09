@@ -9,6 +9,7 @@ tags:
 - Ohio events
 - corporate events
 - how to choose
+robots: "noindex, follow"
 ---
 
 # How to Choose a Teleprompter for Your Event: Complete Decision Guide
