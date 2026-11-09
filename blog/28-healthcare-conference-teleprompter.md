@@ -2,6 +2,7 @@
 layout: default
 title: "Healthcare Conference & Medical Event Teleprompter Services"
 description: "Medical conferences, healthcare symposiums, pharmaceutical presentations — healthcare industry demands accuracy and professionalism in all communications."
+robots: "noindex, follow"
 ---
 # Healthcare Conference & Medical Event Teleprompter Services
 
